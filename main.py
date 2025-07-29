@@ -122,13 +122,13 @@ def summarize_recipes_with_gemini(recipe_data, original_ingredients):
 
 
 if __name__ == "__main__":
-    print("Welcome to the Pantry Chef! 🍳")
+    print("Welcome to the Pantry Chef! ")
     user_input = input("Please tell me what ingredients you have at home: \n> ")
 
     #Extracting ingredients using Gemini
-    print("\n🤖 Analyzing your ingredients...")
+    print("\n Analyzing your ingredients...")
     clean_ingredients = extract_ingredients_with_gemini(user_input)
-    print(f"✅ Found ingredients: {clean_ingredients}")
+    print(f" Found ingredients: {clean_ingredients}")
 
     #Finding recipes using Spoonacular
     print("\n🥣 Searching for recipes...")
@@ -136,7 +136,7 @@ if __name__ == "__main__":
     
     if recipes:
         #Summarizing the results using Gemini
-        print("\n✍️ Creating a delicious summary for you...")
+        print("\n Creating a delicious summary for you...")
         summary = summarize_recipes_with_gemini(recipes, clean_ingredients)
         print("\n" + "="*50)
         print(summary)
